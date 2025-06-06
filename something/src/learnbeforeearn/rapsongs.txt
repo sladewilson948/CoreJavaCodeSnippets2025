@@ -1,0 +1,6 @@
+HotlineBling "D:\as\\as\\songs.mp3"
+Hotline "D:\as\\as\\songs.mp3"
+Cheerios "D:\as\\as\\songs.mp3"
+War "D:\as\\as\\songs.mp3"
+DuppyFreestyle "D:\as\\as\\songs.mp3"
+LetMe "D:\as\\as\\songs.mp3"
