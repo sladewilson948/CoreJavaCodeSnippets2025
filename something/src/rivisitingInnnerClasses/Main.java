@@ -1,4 +1,4 @@
-package rivisiting;
+package rivisitingInnnerClasses;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -53,9 +53,8 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Main obj = new Main();
         System.out.println("Welcome to file encoder!!");
-        String output = obj.encodeFile("D:\\JAVA2025\\something\\src\\rivisiting\\data.txt");
+        String output = obj.encodeFile("D:\\JAVA2025\\something\\src\\rivisitingInnnerClasses\\data.txt");
         System.out.println("Encoded String : "+output);
-        System.out.println(obj.decodeString(output));
         input.close();
     }
 }
