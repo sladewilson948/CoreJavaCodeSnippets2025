@@ -24,12 +24,10 @@ class YourUsers
     {
         return "Hi my name is "+name+ " and I am from "+city+","+country+". My id is "+id;
     }
-
     public String userSpecificMethod()
     {
         return "This is a user specific method I need you to keep that in mind";
     }
-
     public String getName()
     {
         return this.name;
@@ -56,12 +54,10 @@ class YourGenericPrinter <T>
 class YourGenericClassPrinter <T extends YourUsers>
 {
     private T genericUser;
-
     public YourGenericClassPrinter(T genericUser)
     {
         this.genericUser = genericUser;
     }
-
     public T getGenericUser() {
         return genericUser;
     }
