@@ -60,8 +60,6 @@ public class Main {
 
     public static void main(String[] args)
     {
-
-
         OutterClass outer = new OutterClass();
         outer.insideInnerClass();
     }

@@ -1,7 +1,6 @@
 package learnbeforeearn;
 
 import org.jetbrains.annotations.NotNull;
-
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 import java.util.Map;

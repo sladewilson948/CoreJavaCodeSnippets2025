@@ -1,37 +1,36 @@
 package practicemakesperfect;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import java.util.Scanner;
+import java.util.Random;
 
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
-class User
+class MyCar
 {
-    private String name;
-    private int age;
-    private String city;
-    private String country;
+
+    private int id;
+    private String brand;
+    private int year;
+    private int cc;
+    Random random = new Random();
 
 
+    public MyCar(int id, String brand, int year, int cc)
+    {
+        this.id = random.nextInt();
+        this.brand = brand;
+        this.year = year;
+        this.cc = cc;
+
+    }
 }
 
-public class Main {
-
+public class Main
+{
 
     public static void main(String[] args)
     {
-
-        System.out.println("Little play with lombok");
-        System.out.println("Hi my name is aman dubey");
-        User user = new User();
-        user.setAge(26);
-        user.setCity("Bangalore");
-        user.setCountry("India");
-        user.setName("Aman Dubey");
-        System.out.println(user);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Lets see what we can do here!!");
+        input.close();
     }
+
 }
