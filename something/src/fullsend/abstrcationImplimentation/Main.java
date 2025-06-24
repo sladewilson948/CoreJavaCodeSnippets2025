@@ -47,6 +47,7 @@ class User extends AllUsers implements AllUserProperty
 
     @Override
     public void singMeASong() {
+        System.out.println("Small change");
         System.out.println("I am singing a a song for you!!");
     }
 
