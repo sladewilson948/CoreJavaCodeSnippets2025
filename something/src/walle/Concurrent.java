@@ -67,9 +67,56 @@ public class Concurrent {
         int key = Integer.parseInt(input.nextLine());
         userDetails.updateKeyValueInMap(key);
         userDetails.showMap();
+        System.out.println("Let us also now see how we can make use of mutli threading in java and how concurrent mps are thread safe");
+
+        Runnable writer = ()->{
+
+            for(int i=0;i<1000;i++)
+            {
+                userDetails.addDetailsToMap(getRandomInteger(),  getRandomTextValue());
+                System.out.println("Added value to hash map");
+            }
+        };
+
+        Runnable reader = ()-> {
+            for(int i=0;i<1000;i++)
+            {
+                userDetails.showMap();
+            }
+        };
+
+
+        Thread t1 = new Thread(writer);
+        Thread t2 = new Thread(reader);
+
+        t1.start();
+        t2.start();
+
+
         input.close();
     }
 
+
+    public static List<String> getRandomTextValue()
+    {
+        List<String> arr1 = new ArrayList<>(Arrays.asList(
+                "Hi","my","name","is","Aman","Dubey","I","hope"
+        ));
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<4;i++)
+        {
+            sb.append(arr1.get(random.nextInt(arr1.size())));
+            sb.append(" ");
+        }
+
+        if(sb.length()>1)
+        {
+            sb.setLength(sb.length()-1);
+        }
+        return List.of(sb.toString().split(" "));
+
+
+    }
 
     public static int getRandomInteger()
     {
