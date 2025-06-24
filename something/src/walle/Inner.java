@@ -8,6 +8,32 @@ class FirstInner
 {
 
 
+    static class InsideSecondInnerClass
+    {
+
+        private int id;
+        private String name;
+        private String city;
+        private String country;
+        private static final Random random = new Random();
+
+        public InsideSecondInnerClass(String name, String city, String country)
+        {
+            this.id = random.nextInt(1000);
+            this.name = name;
+            this.city = city;
+            this.country = country;
+        }
+
+
+        @Override
+        public String toString()
+        {
+            return "Hello from the static inner class"+id;
+        }
+    }
+
+
 
     class ExtraProperties
     {
@@ -119,6 +145,11 @@ class FirstInner
         System.out.println(insideSecondInnerClass);
         System.out.println(insideSecondInnerClass.getId());
     }
+
+    public void myFunction()
+    {
+        System.out.println("Hello there this is a function");
+    }
 }
 
 
@@ -132,6 +163,7 @@ class Inner
         System.out.println("Making the object for inner class");
         FirstInner firstInner = new FirstInner();
         FirstInner.ExtraProperties extraProperties = firstInner.new ExtraProperties();
+        FirstInner.InsideSecondInnerClass insideSecondInnerClass = new FirstInner.InsideSecondInnerClass("AMAN DUBEY","BANGALORE","INDIA");
         System.out.println("Creating users lists now");
         List<FirstInner.InsideFirstInner> providedList = new ArrayList<>(Arrays.asList(
                 firstInner.new InsideFirstInner("Aman Dubey","Bangalore","India",27),
@@ -152,5 +184,19 @@ class Inner
                 ()-> System.out.println("User not found with the id "+ id)
         );
         firstInner.takeMeToInnerClass();
+        System.out.println(insideSecondInnerClass);
+
+        FirstInner firstInner1 = new FirstInner()
+        {
+            @Override
+            public void myFunction()
+            {
+                System.out.println("Broksi I overrode the method now this is what is called as Anonymous Inner Class where in I just made a object once as a class with no name and modidied it behavious");
+
+            }
+        };
+
+        firstInner.myFunction();
+        firstInner1.myFunction();
     }
 }
