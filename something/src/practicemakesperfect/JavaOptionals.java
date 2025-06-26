@@ -5,10 +5,10 @@ import java.util.Scanner;
 class Employee
 {
 
-    private int id;
-    private String name;
-    private String city;
-    private String country;
+    private final int id;
+    private final String name;
+    private final String city;
+    private final String country;
 
 
     public Employee(int id, String name, String city, String country){
@@ -24,7 +24,7 @@ class Employee
 
     @Override
     public String toString(){
-        return "Hi my name is "+name+ " and I am from "+city+", "+country+" it was nice meeting you!";
+        return "Hi my name is "+name+ " and I am from "+city+", "+country+" it was nice meeting you! "+id;
     }
 
 }

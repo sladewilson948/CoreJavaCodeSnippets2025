@@ -4,6 +4,13 @@ package walle;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
+// time to play with interfaces
+@FunctionalInterface
+interface NoFaceInThis
+{
+    void thisIsMyFunction();
+}
+
 class FirstInner
 {
 
@@ -198,5 +205,13 @@ class Inner
 
         firstInner.myFunction();
         firstInner1.myFunction();
+
+        NoFaceInThis noFaceInThis = ()->{
+
+            System.out.println("Broski this is the implimentation that I did for the lamda that you defined above");
+        };
+
+        noFaceInThis.thisIsMyFunction();
+
     }
 }
