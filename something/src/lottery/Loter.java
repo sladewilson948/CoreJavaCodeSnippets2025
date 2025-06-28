@@ -26,7 +26,7 @@ public class Loter {
         List<Integer> lotteryNums = getSixRandomNumber();
         List<Integer> userNums = new ArrayList<>();
         System.out.println("Welcome to my java program");
-        System.out.println("You will get six chances to pick a number from 1 to 46 and you need to get one right number to win");
+        System.out.println("You will get six chances to pick a number from 0 to 46 and you need to get one right number to win");
         for(int i=0;i<6;i++)
         {
             System.out.println("Enter a number between 1 to 46");
