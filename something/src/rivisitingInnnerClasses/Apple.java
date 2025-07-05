@@ -14,8 +14,7 @@ class MyOuterClass
 }
 
 
-
-// lets take a look at the opther way to do this
+// let's take a look at the opther way to do this
 
 class OutterClass
 {
