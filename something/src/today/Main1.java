@@ -62,9 +62,6 @@ class Outer
         System.out.println(inner);
     }
 
-
-
-
 }
 
 

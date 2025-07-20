@@ -9,7 +9,6 @@ import java.util.List;
 
 class Book implements Serializable
 {
-
     private int id;
     private String title;
     private String author;

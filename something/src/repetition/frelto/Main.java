@@ -1,5 +1,7 @@
 package repetition.frelto;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -13,7 +15,7 @@ class TimeToEncodeDecode
     private static final Random random = new Random();
 
 
-    public void addDataToTextFile(Scanner input)
+    public void addDataToTextFile(@NotNull Scanner input)
     {
         System.out.println("Enter data you want to enter in the file");
         StringBuilder sb = new StringBuilder();
@@ -538,6 +540,5 @@ public class Main
         }
         System.out.print("\n");
     }
-
-
+    
 }

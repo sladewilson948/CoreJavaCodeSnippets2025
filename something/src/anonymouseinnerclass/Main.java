@@ -56,10 +56,7 @@ public class Main {
             }
 
             /// we can add some extra methods if we want to
-            public int getRandomValue()
-            {
-                return rand.nextInt(1000);
-            }
+
             @Override
             public String toString()
             {

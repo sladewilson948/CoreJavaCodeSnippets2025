@@ -55,7 +55,9 @@ public class JavaRecords {
         System.out.println(record.age());
         System.out.println(record.salary());
         System.out.println(record.city());
+        System.out.println(" ");
         System.out.println(record);
+        System.out.println(" ");
         record.thisIsARandomMethod();
         input.close();
     }
